@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Sonic Boom",
+      "price": 89.99,
+      "image": "head5.jpeg",
+      "description": "Immersive wireless sound, long battery life, and active noise cancellation. Designed for serious audiophiles.",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "BassBeast",
+      "price": 69.99,
+      "image": "head6.jpeg",
+      "description": "Powerful bass, ergonomic fit, and stylish matte finish. Ideal for bass lovers.",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "AirTune",
+      "price": 49.99,
+      "image": "head4.jpeg",
+      "description": "Crisp audio with Bluetooth 5.2 and ultra-light design for all-day comfort.",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "name": "Echo Pro",
+      "price": 79.99,
+      "image": "head3.jpeg",
+      "description": "Professional-grade audio and ambient mode. Excellent for work and play.",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "name": "NovaSound",
+      "price": 59.99,
+      "image": "head2.jpeg",
+      "description": "Sleek, colorful design with long-lasting battery and powerful mids.",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "name": "ZenPods",
+      "price": 39.99,
+      "image": "head1.jpeg",
+      "description": "Budget-friendly wireless earbuds with decent noise isolation.",
+      "featured": false
+    }
+  ]
+  
