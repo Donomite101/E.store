@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>profile</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <div class="profile-wrapper">
+    <aside class="sidebar">
+      <div class="user-info">
+        <img id="profileAvatar" src="default-avatar.png" class="avatar" />
+        <h3 id="user-name">John Doe</h3>
+        <p class="balance">₹38.00</p>
+
+        <label class="upload-label">
+          Upload Avatar
+          <input type="file" id="profileImageInput" accept="image/*" hidden />
+        </label>
+      </div>
+
+      <nav class="profile-nav">
+        <a href="#">My Wallet</a>
+        <a href="#">My Orders</a>
+        <a href="#">Rewards</a>
+        <a class="active" href="#">Personal Info</a>
+        <a href="#">Addresses</a>
+        <a href="#">Payments</a>
+        <a href="#">Help</a>
+        <a href="#" onclick="logout()">Sign Out</a>
+      </nav>
+    </aside>
+
+    <main class="profile-page">
+      <h1>Profile Settings</h1>
+
+      <form id="profile-form" class="profile-form">
+        <div class="form-row">
+          <input type="text" id="firstName" placeholder="First Name" required />
+          <input type="text" id="lastName" placeholder="Last Name" required />
+        </div>
+        <input type="email" id="email" placeholder="Email" disabled />
+        <div class="form-row">
+          <input type="tel" id="phone" placeholder="Phone" />
+          <input type="date" id="dob" />
+        </div>
+
+        <div class="gender-row">
+          <label><input type="radio" name="gender" value="male" /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn-save">Save</button>
+          <button type="button" class="btn-cancel" onclick="location.reload()">Cancel</button>
+        </div>
+      </form>
+
+      <section class="order-history">
+        <h2>Order History</h2>
+        <div id="orderHistoryContainer" class="order-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

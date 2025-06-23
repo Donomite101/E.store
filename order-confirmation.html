@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Confirmation - S.O.G</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7fa;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+    .confirmation-wrapper {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #3877ff;
+      margin-bottom: 1rem;
+    }
+    .order-info {
+      margin-top: 1.5rem;
+    }
+    .order-info p {
+      margin: 0.5rem 0;
+    }
+    .order-items {
+      margin-top: 1.5rem;
+    }
+    .order-items h3 {
+      margin-bottom: 1rem;
+    }
+    .order-items ul {
+      list-style: none;
+      padding: 0;
+    }
+    .order-items li {
+      background: #f8f8f8;
+      padding: 0.8rem;
+      margin-bottom: 0.5rem;
+      border-radius: 6px;
+    }
+    .back-home {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #3877ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="confirmation-wrapper">
+  <h1>🎉 Order Placed Successfully!</h1>
+  <div class="order-info">
+    <p><strong>Order ID:</strong> <span id="order-id"></span></p>
+    <p><strong>Payment Method:</strong> <span id="order-payment"></span></p>
+    <p><strong>Total Amount:</strong> ₹<span id="order-total"></span></p>
+    <p><strong>Date:</strong> <span id="order-date"></span></p>
+  </div>
+
+  <div class="order-items">
+    <h3>Items:</h3>
+    <ul id="order-item-list"></ul>
+  </div>
+
+  <a href="index.html" class="back-home">Back to Home</a>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const lastOrder = JSON.parse(localStorage.getItem("lastOrder"));
+    if (!lastOrder) {
+      document.body.innerHTML = "<h2>❌ No recent order found.</h2><a href='index.html'>Go back to home</a>";
+      return;
+    }
+
+    document.getElementById("order-id").textContent = lastOrder.id;
+    document.getElementById("order-total").textContent = lastOrder.total.toFixed(2);
+    document.getElementById("order-payment").textContent = lastOrder.payment;
+    document.getElementById("order-date").textContent = lastOrder.date;
+
+    const list = document.getElementById("order-item-list");
+    lastOrder.items.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} × ${item.qty} - ₹${(item.price * item.qty).toFixed(2)}`;
+      list.appendChild(li);
+    });
+
+    localStorage.removeItem("lastOrder"); // optional: clear after showing
+  });
+</script>
+
+</body>
+</html>
