@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>S.O.G | Winter Collection</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+ <!-- Navigation -->
+ <header class="main-header">
+    <div class="logo">Estore.</div>
+  
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="category.html">Category</a>
+      <a href="#">Latest</a>
+      <a href="#">Blog</a>
+      <a href="#">Pages</a>
+      <a href="#">Contact</a>
+    </nav>
+  
+    <div class="search-container">
+      <input type="text" placeholder="Search for products...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  
+    <div class="right-nav">
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        <a href="profile.html"><i class="fas fa-user"></i></a>
+      <span class="greeting">Welcome</span>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h4>60% Discount</h4>
+      <h1>Winter Collection</h1>
+      <p>Best Cloth Collection by 2025!</p>
+      <a href="category.html" class="btn-shop">Shop Now</a>
+    </div>
+    <div class="hero-image">
+    </div>
+  </section>
+
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+  
+      <a href="category.html?cat=men" class="category-card">
+        <img src="p3.jpeg" alt="Men">
+        <div class="category-card-content">
+          <h3>Men's</h3>
+          <p>Stylish & Comfortable</p>
+        </div>
+      </a>
+  
+      <a href="category.html?cat=women" class="category-card">
+        <img src="p1.jpeg" alt="Women">
+        <div class="category-card-content">
+          <h3>Women's</h3>
+          <p>New Arrivals & Discounts</p>
+        </div>
+      </a>
+  
+      <a href="category.html?cat=mix" class="category-card">
+        <img src="p2.jpeg" alt="Unisex">
+        <div class="category-card-content">
+          <h3>Unisex</h3>
+          <p>Best of Both Worlds</p>
+        </div>
+      </a>
+  
+    </div>
+  </section>
+  
+<!-- === Featured Products by Category === -->
+<section class="featured-section">
+    <h2>Men's Collection</h2>
+    <div class="product-grid" id="men-products"></div>
+  
+    <h2>Women's Collection</h2>
+    <div class="product-grid" id="women-products"></div>
+  
+    <h2>Mix Collection</h2>
+    <div class="product-grid" id="mix-products"></div>
+  </section>
+    
+ 
+  
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-links">
+      <a href="#">Contact</a>
+      <a href="#">Specials</a>
+      <a href="#">T & C's</a>
+      <a href="#">Shipping & Returns</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Payment Methods</a>
+    </div>
+  
+    <div class="footer-policy">
+      <a href="#">Use of Cookies</a> | <a href="#">Cookie Policy</a>
+    </div>
+  
+    <div class="footer-subscription">
+      <form class="subscribe-form">
+        <input type="email" placeholder="Email Address" required />
+        <button type="submit">Subscribe Now</button>
+      </form>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+
+  
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - S.O.G</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="checkout-wrapper">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> &gt; <a href="cart.html">Cart</a> &gt; Checkout
+    </div>
+
+    <h1 class="checkout-title">Checkout</h1>
+
+    <div class="checkout-content">
+      <!-- Billing Form -->
+      <form class="billing-form" id="billingForm">
+        <input type="text" id="billingName" placeholder="Full Name" required />
+        <input type="email" id="billingEmail" placeholder="Email Address" required />
+        <input type="tel" id="billingPhone" placeholder="Phone Number" required />
+        <textarea id="billingAddress" rows="3" placeholder="Shipping Address" required></textarea>
+
+        <select id="paymentMethod" required>
+          <option value="">-- Select Payment Method --</option>
+          <option value="COD">Cash on Delivery</option>
+          <option value="Card">Credit/Debit Card</option>
+          <option value="UPI">UPI</option>
+        </select>
+        <button type="submit" class="place-order-btn">Place Order</button>
+
+      </form>
+
+      <!-- Order Summary -->
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="orderItems"></div>
+        <div class="summary-total">Total: ₹<span id="orderTotal">0.00</span></div>
+      </div>
+    </div>
+  </div>
+  <script src="cart.js"></script>
+  <script src="auth.js"></script>
+  <script src="order.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>

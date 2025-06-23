@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Category | S.O.G</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+ <!-- Navigation -->
+ <header class="main-header">
+    <div class="logo">Estore.</div>
+  
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="category.html">Category</a>
+      <a href="#">Latest</a>
+      <a href="#">Blog</a>
+      <a href="#">Pages</a>
+      <a href="#">Contact</a>
+    </nav>
+  
+    <div class="search-container">
+      <input type="text" placeholder="Search for products...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  
+    <div class="right-nav">
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        <a href="profile.html"><i class="fas fa-user"></i></a>
+      <span class="greeting">Welcome</span>
+    </div>
+  </header>
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+  
+      <a href="category.html?cat=men" class="category-card">
+        <img src="p3.jpeg" alt="Men">
+        <div class="category-card-content">
+          <h3>Men's</h3>
+          <p>Stylish & Comfortable</p>
+        </div>
+      </a>
+  
+      <a href="category.html?cat=women" class="category-card">
+        <img src="p1.jpeg" alt="Women">
+        <div class="category-card-content">
+          <h3>Women's</h3>
+          <p>New Arrivals & Discounts</p>
+        </div>
+      </a>
+  
+      <a href="category.html?cat=mix" class="category-card">
+        <img src="p2.jpeg" alt="Unisex">
+        <div class="category-card-content">
+          <h3>Unisex</h3>
+          <p>Best of Both Worlds</p>
+        </div>
+      </a>
+  
+    </div>
+  </section>
+  
+  <main class="category-page">
+    <h1 id="category-title">Category</h1>
+    <div class="product-grid" id="category-products"></div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 S.O.G. All rights reserved.</p>
+  </footer>
+<script src="category.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>

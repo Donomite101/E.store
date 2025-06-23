@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product | S.O.G</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+
+ <!-- Navigation -->
+ <header class="main-header">
+  <div class="logo">Estore.</div>
+
+  <nav class="nav-links">
+    <a href="#">Home</a>
+    <a href="category.html">Category</a>
+    <a href="#">Latest</a>
+    <a href="#">Blog</a>
+    <a href="#">Pages</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" placeholder="Search for products...">
+    <button><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="right-nav">
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+    <span class="greeting">Welcome</span>
+  </div>
+</header>
+
+
+<!-- === Main Product Content === -->
+<main class="product-page">
+  <nav class="breadcrumb">
+    <a href="index.html">Home</a> /
+    <a href="category.html">Category</a> /
+    <span id="breadcrumb-product-name">Product</span>
+  </nav>
+
+  <div class="product-container">
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+      <img id="main-image" src="" alt="Main Product Image" class="main-product-img" />
+      <div class="thumbnail-row" id="thumbnails"></div>
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-details">
+      <h1 id="product-name">Loading...</h1>
+      <p class="price" id="product-price"></p>
+      <div class="availability"><i class="fa fa-check-circle"></i> In stock</div>
+      <div class="rating">
+        ⭐⭐⭐⭐☆ <span class="review-count">(22 reviews)</span>
+      </div>
+      <p id="product-description"></p>
+
+      <div class="product-actions">
+        <button onclick="addToCart(currentProduct.id)">Add to Cart</button>
+        <button onclick="requireLogin('checkout.html')">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Reviews Section === -->
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review">
+      <p><strong>Jane D.</strong> — "Great quality and fit!" ⭐⭐⭐⭐⭐</p>
+      <p><strong>Ali K.</strong> — "Fast shipping, nice product!" ⭐⭐⭐⭐☆</p>
+    </div>
+  </section>
+</main>
+
+<script>
+function requireLogin(redirectPage) {
+  const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+  if (!isLoggedIn) {
+    alert("Please log in to continue.");
+    window.location.href = "login.html";
+  } else {
+    window.location.href = redirectPage;
+  }
+}
+</script>
+<script src="product.js"></script>
+<script src="products.js"></script>
+<script src="cart.js"></script>
+
+</html>

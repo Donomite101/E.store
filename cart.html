@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart | S.O.G</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Navigation -->
+<header class="main-header">
+  <div class="logo">Estore.</div>
+
+  <nav class="nav-links">
+    <a href="#">Home</a>
+    <a href="category.html">Category</a>
+    <a href="#">Latest</a>
+    <a href="#">Blog</a>
+    <a href="#">Pages</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" placeholder="Search for products...">
+    <button><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="right-nav">
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+    <span class="greeting">Welcome</span>
+  </div>
+</header>
+
+
+  <main class="cart-page">
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items"></div>
+
+    <div class="cart-summary">
+      <p>Total: ₹<span id="cart-total">0.00</span></p>
+      <button type="button" onclick="requireLoginPage('checkout.html')">Proceed to Checkout</button>
+
+
+      
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 S.O.G. All rights reserved.</p>
+  </footer>
+  <script src="cart.js"></script>
+  <script src="auth.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
