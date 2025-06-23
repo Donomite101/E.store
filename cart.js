@@ -6,7 +6,7 @@ function renderCart() {
   const totalEl = document.getElementById("cart-total");
 
   if (!cart.length) {
-    cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    cartContainer.innerHTML = `<div class="empty-cart-msg"><p>Your cart is empty.</p></div>`;
     totalEl.textContent = "0.00";
     return;
   }
@@ -30,21 +30,27 @@ function renderCart() {
           <img src="${product.images[0]}" alt="${product.name}" />
           <div class="cart-item-details">
             <h3>${product.name}</h3>
-            <p>₹${product.price.toFixed(2)}</p>
+            <p>Price: ₹${product.price.toFixed(2)}</p>
             <div class="cart-qty">
               <button class="qty-minus" data-id="${product.id}">−</button>
-              <span>${item.qty}</span>
+              <span class="item-qty">${item.qty}</span>
               <button class="qty-plus" data-id="${product.id}">+</button>
             </div>
           </div>
-          <button class="remove-item" data-id="${product.id}" type="button">Remove</button>
+          <div class="cart-item-actions">
+            <p class="item-total">Subtotal: ₹${itemTotal.toFixed(2)}</p>
+            <button class="remove-item" data-id="${product.id}" type="button">Remove</button>
+          </div>
         `;
         cartContainer.appendChild(div);
       });
 
       totalEl.textContent = total.toFixed(2);
-
       attachCartEvents();
+    })
+    .catch(error => {
+      console.error("Error loading products:", error);
+      cartContainer.innerHTML = "<p>Failed to load cart. Please try again later.</p>";
     });
 }
 
@@ -66,7 +72,9 @@ function changeQty(id, delta) {
   if (!item) return;
 
   item.qty += delta;
-  if (item.qty <= 0) cart = cart.filter(i => String(i.id) !== String(id));
+  if (item.qty <= 0) {
+    cart = cart.filter(i => String(i.id) !== String(id));
+  }
 
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
