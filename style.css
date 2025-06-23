@@ -1484,4 +1484,81 @@ body {
   .main-header .icons a:hover i {
     color: #00e1ff; /* or any accent color */
   }
-  
+  /* === Responsive Fixes for Mobile (max-width: 768px) === */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    gap: 0.8rem;
+  }
+
+  .search-container {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .right-nav {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+    height: auto;
+  }
+
+  .category-grid,
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .category-card {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .category-card img {
+    margin: 0 0 1rem 0;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .checkout-content {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .right-nav .logout-btn {
+    margin-left: 0;
+  }
+}
