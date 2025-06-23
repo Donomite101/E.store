@@ -1484,4 +1484,13 @@ body {
   .main-header .icons a:hover i {
     color: #00e1ff; /* or any accent color */
   }
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+    .profile-page {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
   
