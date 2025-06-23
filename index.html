@@ -4,119 +4,124 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>S.O.G | Winter Collection</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-</head>
-<body>
 
- <!-- Navigation -->
- <header class="main-header">
-    <div class="logo">Estore.</div>
-  
-    <nav class="nav-links">
-      <a href="#">Home</a>
-      <a href="category.html">Category</a>
-      <a href="#">Latest</a>
-      <a href="#">Blog</a>
-      <a href="#">Pages</a>
-      <a href="#">Contact</a>
+  <!-- ✅ Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- ✅ Your Custom CSS (if needed) -->
+  <!-- <link rel="stylesheet" href="style.css"/> -->
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- Navigation -->
+  <header class="flex flex-wrap items-center justify-between px-4 py-4 bg-white shadow-md sticky top-0 z-50">
+    <div class="text-2xl font-bold text-blue-600">Estore.</div>
+
+    <nav class="hidden md:flex space-x-4 text-sm font-medium">
+      <a href="#" class="hover:text-blue-600">Home</a>
+      <a href="category.html" class="hover:text-blue-600">Category</a>
+      <a href="#" class="hover:text-blue-600">Latest</a>
+      <a href="#" class="hover:text-blue-600">Blog</a>
+      <a href="#" class="hover:text-blue-600">Pages</a>
+      <a href="#" class="hover:text-blue-600">Contact</a>
     </nav>
-  
-    <div class="search-container">
-      <input type="text" placeholder="Search for products...">
-      <button><i class="fas fa-search"></i></button>
-    </div>
-  
-    <div class="right-nav">
-        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-        <a href="profile.html"><i class="fas fa-user"></i></a>
-      <span class="greeting">Welcome</span>
+
+    <div class="flex items-center space-x-4">
+      <div class="hidden sm:flex items-center border border-gray-300 rounded-md px-2">
+        <input type="text" placeholder="Search for products..." class="outline-none py-1 px-2 w-40 text-sm"/>
+        <button><i class="fas fa-search text-gray-500"></i></button>
+      </div>
+      <a href="cart.html"><i class="fas fa-shopping-cart text-xl"></i></a>
+      <a href="profile.html"><i class="fas fa-user text-xl"></i></a>
+      <span class="hidden sm:inline text-sm">Welcome</span>
     </div>
   </header>
-  
+
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h4>60% Discount</h4>
-      <h1>Winter Collection</h1>
-      <p>Best Cloth Collection by 2025!</p>
-      <a href="category.html" class="btn-shop">Shop Now</a>
+  <section class="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 bg-gray-100">
+    <div class="mb-10 md:mb-0 max-w-lg text-center md:text-left">
+      <h4 class="text-blue-600 font-semibold text-lg mb-2">60% Discount</h4>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Winter Collection</h1>
+      <p class="text-gray-600 mb-6">Best Cloth Collection by 2025!</p>
+      <a href="category.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
+        Shop Now
+      </a>
     </div>
-    <div class="hero-image">
+    <div class="w-full md:w-1/2">
+      <img src="poster.jpeg" alt="Hero Image" class="w-full object-contain max-h-[400px]">
     </div>
   </section>
 
-  <section id="categories" class="products">
-    <h2>Shop by Category</h2>
-    <div class="product-grid">
-  
-      <a href="category.html?cat=men" class="product-card">
-        <img src="m7.webp" alt="Men's">
-        <h3>Men's</h3>
+  <!-- Categories -->
+  <section id="categories" class="px-6 md:px-20 py-10">
+    <h2 class="text-2xl font-bold mb-6 text-center">Shop by Category</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <a href="category.html?cat=men" class="block bg-white shadow rounded hover:shadow-lg transition p-4 text-center">
+        <img src="m7.webp" alt="Men's" class="w-full h-64 object-cover mb-4 rounded">
+        <h3 class="text-lg font-semibold">Men's</h3>
       </a>
-  
-      <a href="category.html?cat=women" class="product-card">
-        <img src="w4.webp" alt="Women's">
-        <h3>Women's</h3>
+
+      <a href="category.html?cat=women" class="block bg-white shadow rounded hover:shadow-lg transition p-4 text-center">
+        <img src="w4.webp" alt="Women's" class="w-full h-64 object-cover mb-4 rounded">
+        <h3 class="text-lg font-semibold">Women's</h3>
       </a>
-  
-      <a href="category.html?cat=mix" class="product-card">
-        <img src="u7.webp" alt="Unisex">
-        <h3>Unisex</h3>
+
+      <a href="category.html?cat=mix" class="block bg-white shadow rounded hover:shadow-lg transition p-4 text-center">
+        <img src="u7.webp" alt="Unisex" class="w-full h-64 object-cover mb-4 rounded">
+        <h3 class="text-lg font-semibold">Unisex</h3>
       </a>
-  
     </div>
   </section>
-  
-  
-<!-- === Featured Products by Category === -->
-<section class="featured-section">
-    <h2>Men's Collection</h2>
-    <div class="product-grid" id="men-products"></div>
-  
-    <h2>Women's Collection</h2>
-    <div class="product-grid" id="women-products"></div>
-  
-    <h2>Mix Collection</h2>
-    <div class="product-grid" id="mix-products"></div>
+
+  <!-- Featured Section -->
+  <section class="px-6 md:px-20 py-10 bg-gray-50">
+    <h2 class="text-2xl font-bold mb-4">Men's Collection</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="men-products"></div>
+
+    <h2 class="text-2xl font-bold mt-10 mb-4">Women's Collection</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="women-products"></div>
+
+    <h2 class="text-2xl font-bold mt-10 mb-4">Mix Collection</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="mix-products"></div>
   </section>
-    
- 
-  
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-links">
-      <a href="#">Contact</a>
-      <a href="#">Specials</a>
-      <a href="#">T & C's</a>
-      <a href="#">Shipping & Returns</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Payment Methods</a>
-    </div>
-  
-    <div class="footer-policy">
-      <a href="#">Use of Cookies</a> | <a href="#">Cookie Policy</a>
-    </div>
-  
-    <div class="footer-subscription">
-      <form class="subscribe-form">
-        <input type="email" placeholder="Email Address" required />
-        <button type="submit">Subscribe Now</button>
-      </form>
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-10 py-8 px-6 md:px-20">
+    <div class="flex flex-wrap justify-between text-sm mb-6 space-y-4 md:space-y-0">
+      <div class="flex flex-col space-y-2">
+        <a href="#">Contact</a>
+        <a href="#">Specials</a>
+        <a href="#">T & C's</a>
+        <a href="#">Shipping & Returns</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Payment Methods</a>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <a href="#">Use of Cookies</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+      <div class="w-full md:w-auto">
+        <form class="flex flex-col sm:flex-row gap-2">
+          <input type="email" placeholder="Email Address" required class="border border-gray-300 px-3 py-2 rounded w-full sm:w-auto"/>
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+            Subscribe Now
+          </button>
+        </form>
+        <div class="flex space-x-4 mt-4 text-blue-600 text-lg">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
   <script src="products.js"></script>
   <script src="cart.js"></script>
-
-  
 </body>
 </html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
